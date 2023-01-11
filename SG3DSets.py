@@ -1,0 +1,54 @@
+import math
+
+#настройки игры
+WIDTH = 1200
+HEIGHT = 800
+HALFWIDTH = WIDTH // 2
+HALFHEIGHT = HEIGHT // 2
+DOUBLEHEIGHT = 2 * HEIGHT
+FPS = 60
+TILE = 100
+FPSPOS = (WIDTH - 65, 5)
+
+#миникарта
+MINIMAPSCALE = 5
+MINIMAPTILE = TILE // MINIMAPSCALE
+MINIMAPPOS = (0, HEIGHT - HEIGHT // MINIMAPSCALE)
+
+#настройки рейкастинга
+FOV = math.pi/3
+HALFOV = FOV / 2
+NUMRAYS = 300
+MAXDEPTH = 800
+DELTANGEL = FOV / NUMRAYS
+DIST = NUMRAYS / (2 * math.tan(HALFOV))
+PROJCOEF = 3 * DIST * TILE
+SCALE = WIDTH // NUMRAYS
+
+#спрайты
+TWOPI = 2 * math.pi
+CENTERAY = NUMRAYS // 2 - 1
+FAKERAYS = 100
+FAKERAYSRANGE = NUMRAYS - 1 + 2 * FAKERAYS
+
+#текстурки
+TWIDTH  = 1200
+THEIGHT = 1200
+TSCALE = TWIDTH // TILE
+HTHEIGHT = THEIGHT // 2
+
+#настройки игрока
+playerPos = (HALFWIDTH, HALFHEIGHT)
+playerAngle = 0
+playerSpeed = 2
+
+#цвета
+WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
+RED = (255, 0, 0)
+GREEN = (0, 80, 0)
+BLUE = (0, 0, 255)
+GRAY = (127, 127, 127)
+PURPLE = (127, 0, 127)
+SKYBLUE = (0, 190, 255)
+YELLOW = (210, 210, 0)
